@@ -10,6 +10,11 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    // https://mvnrepository.com/artifact/com.github.misberner.duzzt/duzzt-processor
+    annotationProcessor 'com.github.misberner.duzzt:duzzt-processor:0.1.0'
+    implementation 'com.github.misberner.duzzt:duzzt-processor:0.1.0'
+    // https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api
+    implementation 'javax.annotation:javax.annotation-api:1.3.2'
 }
 
 shadowJar {
@@ -17,5 +22,5 @@ shadowJar {
 }
 
 application {
-    mainClass = 'com.interview.Main'
+    mainClass = 'com.fluent_api.App'
 }

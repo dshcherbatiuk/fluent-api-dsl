@@ -1,0 +1,18 @@
+@startuml
+
+[*] --> ADD
+
+ADD -> ON
+
+ON -> FROM
+
+FROM -> TO
+
+TO -> AT
+
+AT -> ADD
+AT -> END
+
+END --> [*]
+
+@enduml
