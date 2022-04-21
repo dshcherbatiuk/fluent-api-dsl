@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calendar {
-	class Event {
+	static class Event {
 		private final String name;
 		private LocalDate date;
 		private LocalTime startTime;
@@ -44,15 +44,9 @@ public class Calendar {
 
 			return this;
 		}
-
-		@Override
-		public String toString() {
-			return String.format("Event:%nname='%s' %ndate=%s %nstartTime=%s %nendTime=%s %nlocation='%s'%n",
-					name, date, startTime, endTime, location);
-		}
 	}
 
-	private List<Event> events;
+	private final List<Event> events;
 
 	public Calendar() {
 		this.events = new ArrayList<>();
@@ -67,10 +61,5 @@ public class Calendar {
 
 	public List<Event> getEvents() {
 		return events;
-	}
-
-	@Override
-	public String toString() {
-		return String.format("events: %s%n", events);
 	}
 }
